@@ -1,61 +1,80 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gestión de Tareas</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Enlace a tu archivo CSS -->
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Enlace a tu archivo CSS -->
+  </head>
+  <body>
     <!-- Navegación -->
     <nav id="main-nav" class="nav">
-        <ul class="nav-list">
-            <li><a href="#home" class="nav-link">Inicio</a></li>
-            <li><a href="#tasks" class="nav-link">Tareas</a></li>
-            <li><a href="#about" class="nav-link">Acerca de</a></li>
-        </ul>
+      <ul class="nav-list">
+        <li><a href="#home" class="nav-link">Inicio</a></li>
+        <li><a href="#tasks" class="nav-link">Tareas</a></li>
+        <li><a href="#about" class="nav-link">Acerca de</a></li>
+      </ul>
     </nav>
 
     <!-- Contenedor principal -->
-    <div id="main-container" class="container">
-        <!-- Formulario para asignar tareas -->
-        <section id="task-form-section" class="form-section">
-            <h1 class="form-title">Asignar Tareas</h1>
-            <form id="task-form" class="task-form">
-                <div class="form-group">
-                    <label for="task-name" class="form-label">Nombre de la tarea:</label>
-                    <input type="text" id="task-name" class="form-input" placeholder="Escribe el nombre de la tarea" required>
-                </div>
-                <div class="form-group">
-                    <label for="task-desc" class="form-label">Descripción:</label>
-                    <textarea id="task-desc" class="form-textarea" placeholder="Escribe una descripción" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="task-priority" class="form-label">Prioridad:</label>
-                    <select id="task-priority" class="form-select" required>
-                        <option value="alta">Alta</option>
-                        <option value="media">Media</option>
-                        <option value="baja">Baja</option>
-                    </select>
-                </div>
-                <button type="submit" id="submit-task" class="form-button">Asignar Tarea</button>
-            </form>
-        </section>
+    <div class="container">
+      <header>
+        <h1>Gestor de Tareas</h1>
+      </header>
 
-        <!-- Sección para mostrar tareas -->
-        <section id="task-list-section" class="task-list-section">
-            <h2 class="task-list-title">Lista de Tareas</h2>
-            <div id="task-list" class="task-list">
-                <!-- Aquí se mostrarán las tareas programadas con JS -->
-            </div>
-        </section>
+      <div class="app-grid">
+        <form id="taskForm">
+          <div class="form-group">
+            <input
+              type="text"
+              id="taskText"
+              placeholder="Nueva tarea"
+              required
+            />
+            <input type="date" id="taskDate" required />
+            <select id="taskPriority">
+              <option value="alta">🔥 Alta</option>
+              <option value="media">🔔 Media</option>
+              <option value="baja">⏰ Baja</option>
+            </select>
+            <button type="submit" class="add-task-btn">➕ Agregar</button>
+          </div>
+        </form>
+
+        <div class="task-controls">
+          <div class="task-counter"></div>
+          <div class="filter-buttons">
+            <button data-filter="todas" class="active">Todas</button>
+            <button data-filter="completadas">✅ Completadas</button>
+            <button data-filter="pendientes">⏳ Pendientes</button>
+          </div>
+        </div>
+
+        <div class="tasks-table-container">
+          <table id="tasksTable" class="tasks-table">
+            <thead>
+              <tr>
+                <th>Estado</th>
+                <th>Tarea</th>
+                <th>Prioridad</th>
+                <th>Fecha Límite</th>
+              </tr>
+            </thead>
+            <tbody id="taskList"></tbody>
+          </table>
+        </div>
+      </div>
     </div>
 
     <!-- Pie de página -->
     <footer id="main-footer" class="footer">
-        <p class="footer-text">© 2023 Gestión de Tareas. Todos los derechos reservados.</p>
+      <p class="footer-text">
+        © 2023 Gestión de Tareas. Todos los derechos reservados.
+      </p>
     </footer>
 
-    <script src="script.js"></script> <!-- Enlace a tu archivo JS -->
-</body>
+    <script src="script.js"></script>
+    <!-- Enlace a tu archivo JS -->
+  </body>
 </html>
