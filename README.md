@@ -18,6 +18,12 @@ Como estudiante, quiero agregar tareas con fecha límite para organizar mi seman
 Criterios de aceptación: La tarea debe mostrar una alerta si la fecha ingresada ya ha pasado.
 
 Marcar tareas como completadas
+
+Persistencia de tareas
+Como usuario, quiero que mis tareas se guarden aunque cierre el navegador.
+
+Criterios de aceptación: Las tareas deben guardarse y cargarse desde localStorage.
+
 Como usuario, quiero marcar las tareas como completadas para hacer seguimiento de mi progreso.
 
 Filtrar tareas por estado
