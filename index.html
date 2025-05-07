@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gestión de Tareas</title>
-    <link rel="stylesheet" href="styles.css" />
-    <!-- Enlace a tu archivo CSS -->
-  </head>
-  <body>
-    <!-- Navegación -->
-    <nav id="main-nav" class="nav">
-      <ul class="nav-list">
-        <li><a href="#home" class="nav-link">Inicio</a></li>
-        <li><a href="#tasks" class="nav-link">Tareas</a></li>
-        <li><a href="#about" class="nav-link">Acerca de</a></li>
-      </ul>
-    </nav>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gestión de Tareas</title>
+        <!--<link rel="stylesheet" href="styles.css"> -->
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    </head>
+    
+    <body>
+        <!-- Navegación -->
+        <nav id="main-nav" class="bg-gray-800 text-white px-6 py-4 shadow-md">
+            <ul class="flex space-x-6 justify-center md:justify-start">
+                <li>
+                    <a href="#home" class="hover:text-yellow-400 transition-colors duration-300 font-medium">Inicio</a>
+                </li>
+                <li>
+                    <a href="#tasks" class="hover:text-yellow-400 transition-colors duration-300 font-medium">Tareas</a>
+                </li>
+                <li>
+                    <a href="#about" class="hover:text-yellow-400 transition-colors duration-300 font-medium">Acerca de</a>
+                </li>
+            </ul>
+        </nav>
 
     <!-- Contenedor principal -->
     <div class="container">
